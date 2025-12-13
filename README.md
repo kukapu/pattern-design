@@ -1,8 +1,8 @@
 ## Patrones de diseño
 
-El código está escrito en TypeScript y usamos Deno para ejecutarlo, puedes usar Bun o Node si lo prefieres.
+El código está escrito en TypeScript y ahora usamos Bun para ejecutarlo.
 
-Si usas Node, deberás configurar TypeScript, por lo que te recomiendo Deno o Bun.
+Si usas Node, deberás configurar TypeScript, por lo que te recomiendo Bun.
 
 
 
