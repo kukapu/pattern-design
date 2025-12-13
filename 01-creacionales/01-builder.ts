@@ -12,3 +12,5 @@
  *
  * https://refactoring.guru/es/design-patterns/builder
  */
+
+const a = 'a';
