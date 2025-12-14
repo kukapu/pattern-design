@@ -16,6 +16,12 @@
 
 import { COLORS } from '../helpers/colors.ts';
 
+const COLORS_LOGGER = {
+  info: COLORS.blue,
+  warn: COLORS.yellow,
+  error: COLORS.red,
+};
+
 function formatDate(date: Date): string {
   const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, '0'); // Meses empiezan desde 0
@@ -31,9 +37,12 @@ function formatDate(date: Date): string {
 type LogLevel = 'info' | 'warn' | 'error';
 
 function createLogger(level: LogLevel) {
-  // Retorna una función que recibe el "message" como argumento
-  // Completar: implementar el logger con formato y color para cada nivel
-  throw new Error('Not implemented');
+  return function infoLogger(message: string) {
+    const date = new Date();
+    const formattedDate = formatDate(date);
+    const color = COLORS_LOGGER[level];
+    console.log(`${color}[${level.toUpperCase()}:${formattedDate}] ${message}${COLORS.reset}`);
+  }
 }
 
 // Ejemplo de uso
